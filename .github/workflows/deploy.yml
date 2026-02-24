@@ -1,0 +1,29 @@
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/736334703361/locations/global/workloadIdentityPools/github-actions-pool/providers/github-provider
+          service_account: github-deployer@toast-stats-prod-6d64a.iam.gserviceaccount.com
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ steps.auth.outputs.credentials_file_path }}
+          channelId: live
+          projectId: toast-stats-prod-6d64a
+          target: portal

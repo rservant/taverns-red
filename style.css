@@ -139,9 +139,8 @@ img {
 }
 
 .header-logo img {
-  width: 36px;
   height: 36px;
-  border-radius: 50%;
+  width: auto;
 }
 
 .header-wordmark {

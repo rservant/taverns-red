@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Taverns — Projects by Ralph Servant</title>
+  <meta name="description" content="Red Taverns is the home of data-driven tools for Toastmasters and public speaking. Explore district analytics, speech evaluation, and more.">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background particles -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <img src="assets/logo.png" alt="Red Taverns" width="36" height="36">
+        <span class="header-wordmark">Red Taverns</span>
+      </div>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="https://github.com/rservant" class="nav-link nav-link--github" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-logo-container">
+          <img src="assets/logo.png" alt="Red Taverns Logo" class="hero-logo" width="180" height="180">
+          <div class="hero-glow"></div>
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-title-line">Red</span>
+          <span class="hero-title-line hero-title-line--accent">Taverns</span>
+        </h1>
+        <p class="hero-subtitle">Data-driven tools for the Toastmasters community</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn--primary">
+            <span class="btn-icon">↓</span>
+            Explore Projects
+          </a>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-badge">Projects</span>
+          <h2 class="section-title">What We're Building</h2>
+          <p class="section-description">Open-source tools that bring clarity and insight to the Toastmasters experience.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Toast Stats Card -->
+          <a href="https://ts.taverns.red" class="project-card" id="project-toast-stats" target="_blank" rel="noopener">
+            <div class="card-status">
+              <span class="status-dot status-dot--live"></span>
+              Live
+            </div>
+            <div class="card-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect x="4" y="28" width="8" height="16" rx="2" fill="currentColor" opacity="0.4"/>
+                <rect x="14" y="20" width="8" height="24" rx="2" fill="currentColor" opacity="0.6"/>
+                <rect x="24" y="12" width="8" height="32" rx="2" fill="currentColor" opacity="0.8"/>
+                <rect x="34" y="4" width="8" height="40" rx="2" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Toastmasters District Stats</h3>
+            <p class="card-description">
+              Real-time district rankings, club analytics, and membership trends across 
+              all Toastmasters districts worldwide. Track performance, compare districts, 
+              and discover insights.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Analytics</span>
+              <span class="tag">Rankings</span>
+              <span class="tag">Real-time</span>
+            </div>
+            <div class="card-link-hint">
+              <span>ts.taverns.red</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.5L12 2.5L12 10M11.5 3L3.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+            </div>
+          </a>
+
+          <!-- Speech Evaluator Card -->
+          <div class="project-card project-card--coming-soon" id="project-speech-evaluator">
+            <div class="card-status">
+              <span class="status-dot status-dot--wip"></span>
+              In Development
+            </div>
+            <div class="card-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <path d="M24 4C13 4 4 13 4 24C4 35 13 44 24 44C26 44 28 43.6 30 43V37C28.2 37.6 26.2 38 24 38C16.3 38 10 31.7 10 24C10 16.3 16.3 10 24 10C31.7 10 38 16.3 38 24V27H44V24C44 13 35 4 24 4Z" fill="currentColor" opacity="0.3"/>
+                <path d="M20 18V30L32 24L20 18Z" fill="currentColor"/>
+                <circle cx="38" cy="36" r="8" fill="currentColor" opacity="0.6"/>
+                <path d="M35 36L37 38L41 34" stroke="var(--bg-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Speech Evaluator</h3>
+            <p class="card-description">
+              AI-powered speech evaluation tool that provides structured feedback 
+              on Toastmasters speeches. Get actionable insights on delivery, 
+              structure, and language.
+            </p>
+            <div class="card-tags">
+              <span class="tag">AI</span>
+              <span class="tag">Evaluation</span>
+              <span class="tag">Feedback</span>
+            </div>
+            <div class="card-link-hint card-link-hint--muted">
+              <span>Coming soon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="section-inner">
+        <div class="about-content">
+          <div class="about-text">
+            <span class="section-badge">About</span>
+            <h2 class="section-title">Built in Canada, eh 🍁</h2>
+            <p>
+              Red Taverns is a collection of open-source projects built to serve the 
+              global Toastmasters community. We believe in data transparency, beautiful 
+              design, and tools that just work.
+            </p>
+            <p>
+              All projects are open source and available on GitHub. Contributions, 
+              feedback, and ideas are always welcome.
+            </p>
+            <div class="about-links">
+              <a href="https://github.com/rservant" class="btn btn--secondary" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="about-decoration" aria-hidden="true">
+            <div class="roundel">
+              <div class="roundel-ring roundel-ring--outer"></div>
+              <div class="roundel-ring roundel-ring--inner"></div>
+              <div class="roundel-bar">
+                <span>TAVERNS.RED</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-text">© 2026 Red Taverns · Made with 🍁 in Canada</p>
+      <p class="footer-links">
+        <a href="https://github.com/rservant" target="_blank" rel="noopener">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://ts.taverns.red" target="_blank" rel="noopener">District Stats</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

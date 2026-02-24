@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "toast-stats-prod-6d64a"
+  },
+  "targets": {
+    "toast-stats-prod-6d64a": {
+      "hosting": {
+        "portal": ["taverns-red-portal"]
+      }
+    }
+  }
+}

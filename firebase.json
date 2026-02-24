@@ -1,40 +1,43 @@
 {
-    "hosting": {
-        "public": ".",
-        "ignore": [
-            "firebase.json",
-            "**/.*",
-            "**/node_modules/**",
-            "README.md"
-        ],
-        "headers": [
-            {
-                "source": "**/*.@(js|css)",
-                "headers": [
-                    {
-                        "key": "Cache-Control",
-                        "value": "public, max-age=31536000, immutable"
-                    }
-                ]
-            },
-            {
-                "source": "**/*.@(png|ico|svg|webp)",
-                "headers": [
-                    {
-                        "key": "Cache-Control",
-                        "value": "public, max-age=31536000, immutable"
-                    }
-                ]
-            },
-            {
-                "source": "**/*.@(woff|woff2)",
-                "headers": [
-                    {
-                        "key": "Cache-Control",
-                        "value": "public, max-age=31536000, immutable"
-                    }
-                ]
-            }
-        ]
-    }
+    "hosting": [
+        {
+            "target": "portal",
+            "public": ".",
+            "ignore": [
+                "firebase.json",
+                "**/.*",
+                "**/node_modules/**",
+                "README.md"
+            ],
+            "headers": [
+                {
+                    "source": "**/*.@(js|css)",
+                    "headers": [
+                        {
+                            "key": "Cache-Control",
+                            "value": "public, max-age=31536000, immutable"
+                        }
+                    ]
+                },
+                {
+                    "source": "**/*.@(png|ico|svg|webp)",
+                    "headers": [
+                        {
+                            "key": "Cache-Control",
+                            "value": "public, max-age=31536000, immutable"
+                        }
+                    ]
+                },
+                {
+                    "source": "**/*.@(woff|woff2)",
+                    "headers": [
+                        {
+                            "key": "Cache-Control",
+                            "value": "public, max-age=31536000, immutable"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

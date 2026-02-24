@@ -636,61 +636,13 @@ img {
   margin-top: var(--space-xl);
 }
 
-/* Underground Roundel Decoration */
-.roundel {
-  position: relative;
+/* About Logo */
+.about-logo {
   width: 280px;
-  height: 280px;
+  height: auto;
   margin: 0 auto;
-}
-
-.roundel-ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 3px solid var(--red-primary);
-}
-
-.roundel-ring--outer {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  animation: roundel-spin 30s linear infinite;
-  border-style: dashed;
-  opacity: 0.3;
-}
-
-.roundel-ring--inner {
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  opacity: 0.6;
-}
-
-@keyframes roundel-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.roundel-bar {
-  position: absolute;
-  top: 50%;
-  left: -10px;
-  right: -10px;
-  transform: translateY(-50%);
-  background: var(--red-primary);
-  padding: var(--space-md) var(--space-lg);
-  text-align: center;
-  font-weight: var(--font-weight-bold);
-  font-size: 1.1rem;
-  letter-spacing: 0.15em;
-  color: var(--cream);
+  filter: drop-shadow(0 0 40px rgba(193, 59, 59, 0.3));
+  animation: logo-float 5s ease-in-out infinite;
 }
 
 /* --- Footer --- */
@@ -772,9 +724,8 @@ img {
     order: -1;
   }
 
-  .roundel {
+  .about-logo {
     width: 200px;
-    height: 200px;
   }
 
   .section-inner {

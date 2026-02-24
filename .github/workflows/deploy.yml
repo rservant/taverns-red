@@ -20,10 +20,5 @@ jobs:
           workload_identity_provider: projects/736334703361/locations/global/workloadIdentityPools/github-actions-pool/providers/github-provider
           service_account: github-deployer@toast-stats-prod-6d64a.iam.gserviceaccount.com
 
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ steps.auth.outputs.credentials_file_path }}
-          channelId: live
-          projectId: toast-stats-prod-6d64a
-          target: portal
+      - name: Deploy to Firebase Hosting
+        run: npx firebase-tools@latest deploy --only hosting:portal --project toast-stats-prod-6d64a
